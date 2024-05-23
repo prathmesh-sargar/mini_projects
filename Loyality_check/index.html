@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random number generator ok </title>
+    <Style>
+        #b{
+            background-color: rgb(242, 82, 82);
+            color: white;
+            padding-left: 5px;
+            padding-right: 5px;
+             border-radius: 8px;
+        }
+        #b:hover{
+            transform: scale(1.1);
+            background-color: black;
+          
+        }
+        .cont{
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            align-content: center;
+            margin: auto;
+        }
+
+        .box{
+            margin-top: 100px;
+            border: 5px solid black;
+            padding: 40px;
+            border-radius: 20px;
+            background-color: rgb(236, 236, 140);
+           
+        }
+        #reset{
+            background-color: rgb(87, 128, 234);
+            color: white;
+            font-size: 20px;
+            border-radius: 10px;
+        }
+        b{
+            font-size: 17px;
+        }
+        input{
+            font-size: 22px;
+            border-radius: 10px;
+
+
+        }
+        #check{
+            font-size: 20px;
+            background-color: black;
+            color: azure;
+            border-radius: 10px;
+            transition: 0.2s;
+
+
+        }
+
+        #check:hover{
+            background-color: blueviolet;
+
+        }
+    </Style>
+</head>
+<body>
+        <div class="cont">
+            <div class="box">
+
+                <h1>Check loyality of your patner....😁😜👀 </h1>
+                <b>Enter your name :-</b><input id="yourname" type="text"><br><br>
+                <b>Enter your lover name :- </b></b><input id="lovername" type="text">
+                <br><br>
+                <h2 id="b" >check your lover how much love you</h2>   
+                <br><br>
+                <button  id="check" onclick="check()" >check..!!</button>
+                <br><br>
+                <!-- <input id="result" type="text"> -->
+
+               <h2 id="result"></h2>
+                
+                <button id="reset" onclick="set()" >try again</button>
+            </div>
+        </div>
+      
+
+
+</body>
+ <Script>
+
+    function check()
+    {
+      var name1=  document.getElementById('yourname').value;
+     var name2 =  document.getElementById('lovername').value;
+        
+        var a = Math.random() 
+        
+        var a =  parseInt(a*(100-1)+1)+" % ";
+         document.getElementById('result').textContent = name1+" your lover "+name2+"  is  "+a+ " love you ok ";
+
+
+    }
+    function set()
+    {
+        document.getElementById('yourname').value = "";
+        document.getElementById('lovername').value = "";
+        document.getElementById('result').textContent = "";
+        
+    }
+    
+   
+
+      
+ </Script>
+</html>
